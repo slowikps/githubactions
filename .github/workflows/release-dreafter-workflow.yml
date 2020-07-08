@@ -1,0 +1,25 @@
+name: Release drafter
+#on:
+#  repository_dispatch:
+#    types:[release_draft_new_version]
+#on:
+#  workflow_dispatch:
+#    inputs:
+#      logLevel:
+#        description: 'Log level'
+#        required: true
+#        default: 'warning'
+#      tags:
+#        description: 'Test scenario tags'
+on:
+  push:
+    branches:
+      - "PP-179release_drafter"
+
+jobs:
+  update_release_draft:
+    runs-on: self-hosted
+    steps:
+      - uses: release-drafter/release-drafter@v5.11.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
