@@ -13,13 +13,17 @@ name: Release drafter
 #        description: 'Test scenario tags'
 on:
   push:
-    branches:
-      - "master"
+    tags:
+      - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
 
 jobs:
   update_release_draft:
     runs-on: self-hosted
+    env:
+      RELEASE_VERSION: ${{ github.ref }}
+      MAGIC: VERSION::${GITHUB_REF/refs\/tags\//}
     steps:
-      - uses: release-drafter/release-drafter@v5.11.0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: just echo a message
+        run: |
+          echo $RELEASE_VERSION
+          echo $MAGIC
