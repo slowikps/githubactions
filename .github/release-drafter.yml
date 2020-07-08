@@ -9,6 +9,9 @@ template: |
 
 
 categories:
+  - title: '💾🐬 Liquibase Migration'
+    labels:
+      - 'liquibase'
   - title: '🚀 Features'
     labels:
       - 'major'
