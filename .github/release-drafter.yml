@@ -33,6 +33,7 @@ version-resolver:
   minor:
     labels:
       - 'type: feature'
+      - 'type: liquibase'
   patch:
     labels:
       - 'type: bug'
