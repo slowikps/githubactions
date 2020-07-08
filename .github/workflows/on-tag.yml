@@ -31,3 +31,4 @@ jobs:
           echo $RELEASE_VERSION
           echo $MAGIC
           echo $VERSION
+          echo "TAG: $GITHUB_TAG"
