@@ -14,6 +14,7 @@ categories:
       - 'major'
       - 'minor'
       - 'patch'
+      - 'enhancement'
   - title: '🐛 Bug Fixes'
     labels:
       - 'fix'
