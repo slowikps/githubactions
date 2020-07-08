@@ -21,9 +21,12 @@ jobs:
     runs-on: self-hosted
     env:
       RELEASE_VERSION: ${{ github.ref }}
-      MAGIC: VERSION::${GITHUB_REF/refs\/tags\//}
     steps:
+    - name: Get the version
+      id: get_version
+      run: echo ::set-env MAGIC=VERSION::${GITHUB_REF/refs\/tags\//}
       - name: just echo a message
         run: |
           echo $RELEASE_VERSION
           echo $MAGIC
+          echo $VERSION
