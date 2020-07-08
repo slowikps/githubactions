@@ -1,4 +1,4 @@
-name: Release drafter
+name: On tag creation
 #on:
 #  repository_dispatch:
 #    types:[release_draft_new_version]
