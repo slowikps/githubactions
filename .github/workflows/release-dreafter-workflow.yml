@@ -14,7 +14,7 @@ name: Release drafter
 on:
   push:
     branches:
-      - "PP-179release_drafter"
+      - "master"
 
 jobs:
   update_release_draft:
