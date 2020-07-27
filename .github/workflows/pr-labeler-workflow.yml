@@ -1,0 +1,13 @@
+on:
+  pull_request:
+    types: [opened, labeled, unlabeled, synchronize]
+
+jobs:
+  test:
+    name: Build
+    runs-on: self-hosted
+    steps:
+      - name: PR Labeler Workflow
+        uses: actions/labeler@v2
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
