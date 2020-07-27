@@ -1,9 +1,2 @@
-feature:
-  branch: "^feature/.*"
-bug:
-  branch: "^fix/.*"
-chore:
-  branch: "^task/.*"
-
 db-change:
-  - ["src/resources/*"]
+  - "src/resources/*"
